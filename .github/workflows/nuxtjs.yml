@@ -21,7 +21,7 @@ jobs:
       - run: npm install
       - run: npm run build
         env:
-          NITRO_PRESET: simulatedcode.github.io
+          NITRO_PRESET: github-pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
