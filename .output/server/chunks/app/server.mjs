@@ -1,4 +1,4 @@
-import { version, getCurrentInstance, inject, ref, watchEffect, watch, useSSRContext, createApp, reactive, unref, provide, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, toRef, h, isReadonly, defineAsyncComponent, isRef, mergeProps } from 'vue';
+import { version, getCurrentInstance, inject, ref, watchEffect, watch, useSSRContext, createApp, reactive, unref, provide, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, toRef, h, isReadonly, defineAsyncComponent, isRef, resolveComponent, withCtx } from 'vue';
 import { $fetch } from 'ofetch';
 import { createHooks } from 'hookable';
 import { getContext } from 'unctx';
@@ -7,7 +7,7 @@ import { getActiveHead, createServerHead as createServerHead$1 } from 'unhead';
 import { defineHeadPlugin } from '@unhead/shared';
 import { hasProtocol, parseURL, joinURL, isEqual, stringifyParsedURL, stringifyQuery, parseQuery } from 'ufo';
 import { createError as createError$1, sendRedirect } from 'h3';
-import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode, ssrRenderAttrs } from 'vue/server-renderer';
+import { ssrRenderSuspense, ssrRenderComponent, ssrRenderVNode } from 'vue/server-renderer';
 import { a as useRuntimeConfig$1 } from '../nitro/node-server.mjs';
 import 'node-fetch-native/polyfill';
 import 'node:http';
@@ -615,7 +615,25 @@ const _plugins = [
 ];
 const _sfc_main$1 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  _push(`<div${ssrRenderAttrs(mergeProps({ class: "p-1 dark:bg-neutral-800 h-screen" }, _attrs))}><p class="text-sm text-gray-500">simulatedcode</p><p class="text-sm text-gray-500">code: <span class="mt-4 animate-pulse delay-300 text-lg dark:text-green-500">|</span></p></div>`);
+  const _component_HEAD = resolveComponent("HEAD");
+  _push(`<!--[-->`);
+  _push(ssrRenderComponent(_component_HEAD, null, {
+    default: withCtx((_, _push2, _parent2, _scopeId) => {
+      if (_push2) {
+        _push2(`<title${_scopeId}>Simulated Code</title><meta name="description" description="simulated"${_scopeId}>`);
+      } else {
+        return [
+          createVNode("title", null, "Simulated Code"),
+          createVNode("meta", {
+            name: "description",
+            description: "simulated"
+          })
+        ];
+      }
+    }),
+    _: 1
+  }, _parent));
+  _push(`<div class="p-1 dark:bg-neutral-800 h-screen"><p class="text-sm text-gray-400">Simulated Code</p><p class="text-sm text-gray-400">Code: <span class="mt-4 animate-pulse delay-300 text-lg dark:text-green-500">|</span></p></div><!--]-->`);
 }
 const _sfc_setup$1 = _sfc_main$1.setup;
 _sfc_main$1.setup = (props, ctx) => {

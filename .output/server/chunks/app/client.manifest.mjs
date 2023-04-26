@@ -8,7 +8,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-404.0485a068.js",
+    "file": "error-404.ef2b73ba.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -28,7 +28,7 @@ const client_manifest = {
     "resourceType": "script",
     "module": true,
     "css": [],
-    "file": "error-500.ddea5162.js",
+    "file": "error-500.ca625b1d.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -41,39 +41,39 @@ const client_manifest = {
   },
   "node_modules/nuxt/dist/app/entry.css": {
     "resourceType": "style",
-    "file": "entry.984e79e6.css",
+    "file": "entry.aa9cf285.css",
     "src": "node_modules/nuxt/dist/app/entry.css"
   },
   "node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "css": [
-      "entry.984e79e6.css"
+      "entry.aa9cf285.css"
     ],
     "dynamicImports": [
-      "virtual:nuxt:/Users/Loskepetos/Development/00-Simulasi/simulatedcode/.nuxt/error-component.mjs"
+      "virtual:nuxt:/workspaces/simulatedcode.github.io/.nuxt/error-component.mjs"
     ],
-    "file": "entry.ae9f009f.js",
+    "file": "entry.582b550e.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js"
   },
-  "entry.984e79e6.css": {
-    "file": "entry.984e79e6.css",
+  "entry.aa9cf285.css": {
+    "file": "entry.aa9cf285.css",
     "resourceType": "style"
   },
-  "virtual:nuxt:/Users/Loskepetos/Development/00-Simulasi/simulatedcode/.nuxt/error-component.mjs": {
+  "virtual:nuxt:/workspaces/simulatedcode.github.io/.nuxt/error-component.mjs": {
     "resourceType": "script",
     "module": true,
     "dynamicImports": [
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "error-component.52389909.js",
+    "file": "error-component.3f0ddef4.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
-    "src": "virtual:nuxt:/Users/Loskepetos/Development/00-Simulasi/simulatedcode/.nuxt/error-component.mjs"
+    "src": "virtual:nuxt:/workspaces/simulatedcode.github.io/.nuxt/error-component.mjs"
   }
 };
 
